@@ -1,0 +1,285 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0dcdc;
+    color: #fff;
+    overflow-x: hidden;
+}
+header {
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    animation: fadeIn 2s ease-in-out;
+}
+.secondary-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(125deg, #000000 85%, #fff700 0%);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.secondary-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.secondary-nav li {
+    margin: 0 15px;
+    padding-top: 30px;
+}
+.secondary-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 0 50px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.secondary-nav a:hover {
+    color: rgb(0, 68, 255);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav li {
+    position: relative;
+    margin: 0 15px;
+}
+nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background 0.3s;
+}
+nav a:hover {
+    color: #001aff;
+}
+nav ul li ul {
+    width: 130px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    padding: 0;
+    z-index: 1;
+}
+nav ul li ul li {
+    width: 200px;
+}
+nav ul li ul li a {
+    padding: 5px;
+}
+.submenu-toggle {
+    cursor: pointer;
+}
+
+nav ul #logo {
+    width: 50px;
+    height: 40px;
+    padding: 0 30px;
+}
+
+#home-page {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 20px 0;
+    margin: 20px 0;
+    background-color: #3b3b3b;
+}
+
+#home-page .home_image {
+    width: 50%;
+    height: 500px;
+    align-items: center;
+    padding: 20px;
+}
+
+#home-page .home-text {
+    font-weight: 800;
+    color: #ffa600;
+    font-style: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 250px 0;
+    font-size: 50px;
+}
+
+/* foote style */
+
+#Contact-Us {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.platforms {
+    display: inline-block;
+    width: 30%;
+    margin: 10px 1%;
+    vertical-align: top;
+}
+
+.my-image {
+    width: 400px;
+    height: 300px;
+}
+
+.my-platforms {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.fa-brands,
+.fa-solid {
+    font-size: 24px;
+    margin: 0 5px;
+}
+
+.fa-brands:hover, .fa-solid:hover {
+    color: #001aff;
+}
+
+
+/* Card container styles */
+#business {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 200px;
+}
+
+/* Section styles */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Individual card styles */
+.card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Card image styles */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Card text styles */
+.card .card_name,
+.card .card_price,
+.card .card_description {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Hover effect styles */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media only screen and (max-width: 1200px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 768px) {
+    .my-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .my-platforms {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .my-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .my-platforms {
+        font-size: 14px;
+    }
+
+    .fa-brands,
+    .fa-solid {
+        font-size: 20px;
+    }
+
+    .platforms {
+        width: 90%;
+        margin: 10px 5%;
+    }
+}
+
+.submenu-toggle::after {
+    content: ' \25B6'; /* Greater than icon */
+    font-size: 0.8em;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media (max-width: 768px) {
+    .secondary-nav {
+        display: none;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li ul {
+        position: static;
+    }
+
+    #home-page{
+        display: none;
+    }
+}
